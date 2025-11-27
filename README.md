@@ -48,7 +48,7 @@ I plan to excecute these steps to complete my project.
 
 - [X] **Step 1:** Setup & State Definition:
 Define the ReviewState using Pydantic. This includes schemas for PR metadata, file diffs, and the list of generated review comments.
-- [ ] **Step 2:** GitHub Integration (Tools):
+- [X] **Step 2:** GitHub Integration (Tools):
 Implement the GitHubTool class using PyGithub. Create functions to fetch PR diffs and post comments to real repositories.
 - [ ] **Step 3:** The Reviewer Agent:
 Build the core analysis node. This uses gpt-4o-mini with a specialized prompt to detect bugs, security flaws, and style violations in the diffs.
