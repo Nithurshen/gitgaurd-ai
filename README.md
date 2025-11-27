@@ -77,7 +77,7 @@ I used the course knowledge in the following ways:
 
 Project Structure:
 
-[Graph](https://github.com/Nithurshen/nithurshen-capstone-MAT496/blob/main/gitguard_workflow.png)
+![Graph](https://github.com/Nithurshen/nithurshen-capstone-MAT496/blob/main/gitguard_workflow.png)
 
 GitGuard AI solves a genuine problem in software development: **Review Fatigue**.
 - **First-Pass Filter**: It catches trivial issues (typos, missing docstrings, minor bugs) automatically, allowing human reviewers to focus on complex architectural logic.
@@ -125,8 +125,8 @@ Approve posting these comments? (yes/no): yes
 Process finished with exit code 0
 ```
 
-[SS1](https://github.com/Nithurshen/nithurshen-capstone-MAT496/blob/main/ss1.png)
+![SS1](https://github.com/Nithurshen/nithurshen-capstone-MAT496/blob/main/ss1.png)
 
-[SS2](https://github.com/Nithurshen/nithurshen-capstone-MAT496/blob/main/ss2.png)
+![SS2](https://github.com/Nithurshen/nithurshen-capstone-MAT496/blob/main/ss2.png)
 
 *I have deleted the comments now, as it was a real PR that I contributed to an open source project*
