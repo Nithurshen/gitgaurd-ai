@@ -59,7 +59,30 @@ Run the agent against a real "Test Pull Request" to verify it detects issues and
 
 ## Conclusion:
 
-I had planned to achieve {this this}. I think I have/have-not achieved the conclusion satisfactorily. The reason for your satisfaction/unsatisfaction.
+I had planned to achieve the agent. I think I have achieved the conclusion satisfactorily.
+
+In this capstone, I successfully built GitGuard AI, a functioning autonomous code review assistant. The system moves beyond simple scripts by implementing a stateful, cyclic workflow that mimics a human engineer's process: reading code, thinking about issues, drafting comments, and waiting for final approval before submitting.
+
+I used the following technologies in my project:
+- **LangGraph:** I used it to define the StateGraph, manage the flow between the reviewer and poster nodes, and handle interrupt_before logic for human intervention.
+- **PyGithub:** I used to interface with the real world. It allows our agent to fetch raw diffs and post Review Comments directly to GitHub Pull Requests.
+- **OpenAI:** I utilized this model for its balance of speed and reasoning capability, optimizing the prompt for security and code style analysis.
+- **Pydantic:** Essential for Structured Output. I defined strict schemas `PullRequestComment` to ensure the LLM never outputs unstructured text, guaranteeing that every comment has a valid file path and line number.
+- **SQLite:** Implemented via `SqliteSaver` to provide Persistence. This allows the graph to "pause" execution, wait for user input indefinitely, and resume exactly where it left off.
+
+I used the course knowledge in the following ways:
+- **Human-in-the-Loop (HITL):** I implemented a safety check using LangGraph's checkpointing system.
+- **Tool Calling:** I gave it real tools (`fetch_pr_diff`, `post_pr_review`) to perform actual work.
+- **State Management:** I implemented a shared `ReviewState`, allowing different parts of the application (Agent vs. Tool) to read and write to a common memory structure.
+
+GitGuard AI solves a genuine problem in software development: **Review Fatigue**.
+- **First-Pass Filter**: It catches trivial issues (typos, missing docstrings, minor bugs) automatically, allowing human reviewers to focus on complex architectural logic.
+- **Standardization:** It enforces coding standards consistently across a team, without personal bias.
+- **Security:** It acts as an automated security auditor, flagging potential vulnerabilities (like secrets in code or injection risks) before they merge.
+
+This project serves as a foundational template for any "AI Co-pilot" application that requires reading external data, making decisions, and acting on the world with human supervision.
+
+A sample run of the project:
 
 ```commandline
 /Users/nithurshen/SNU/nithurshen-capstone-MAT496/.venv/bin/python /Users/nithurshen/SNU/nithurshen-capstone-MAT496/main.py 
