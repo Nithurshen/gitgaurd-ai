@@ -50,9 +50,9 @@ I plan to excecute these steps to complete my project.
 Define the ReviewState using Pydantic. This includes schemas for PR metadata, file diffs, and the list of generated review comments.
 - [X] **Step 2:** GitHub Integration (Tools):
 Implement the GitHubTool class using PyGithub. Create functions to fetch PR diffs and post comments to real repositories.
-- [X] **Step 3:** The Reviewer Agent:
+- [X] **Step 3:** Reviewer Agent:
 Build the core analysis node. This uses gpt-4o-mini with a specialized prompt to detect bugs, security flaws, and style violations in the diffs.
-- [ ] **Step 4:** HITL & Graph Orchestration:
+- [X] **Step 4:** HITL & Graph Orchestration:
 Construct the LangGraph workflow. Implement interrupt_before logic to allow the user to edit/reject AI comments before they are posted.
 - [ ] **Step 5:** Testing & Validation:
 Run the agent against a real "Test Pull Request" to verify it detects issues and posts comments correctly.
