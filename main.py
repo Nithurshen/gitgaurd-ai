@@ -11,7 +11,7 @@ This script demonstrates the full application lifecycle:
 
 import uuid
 import os
-from graph import graph
+from src.graph import graph
 
 def run_gitguard(repo_name: str, pr_number: int):
     """

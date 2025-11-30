@@ -9,8 +9,8 @@ from typing import List
 from pydantic import BaseModel, Field
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
-from state import ReviewState, PullRequestComment
-from tools import fetch_pr_diff
+from src.state import ReviewState, PullRequestComment
+from src.tools import fetch_pr_diff
 
 # Initialize the model with low temperature for deterministic analysis
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
